@@ -1,0 +1,22 @@
+plugins {
+    id 'com.github.johnrengelman.shadow' version '6.0.0'
+    id 'java'
+    id 'application'
+}
+
+tasks.withType(JavaCompile) {
+    options.encoding = 'UTF-8'
+}
+mainClassName = 'me.mateus.asciiwebcam.Main'
+group 'me.mateus'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation 'com.github.sarxos:webcam-capture:0.3.12'
+    implementation 'org.slf4j:slf4j-api:1.7.36'
+    implementation 'org.slf4j:slf4j-simple:1.7.36'
+}
